@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            background-image: url('https://www.w3schools.com/w3images/mountains.jpg'); /* Change to your image URL */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark transparent overlay */
+            padding: 40px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #f39c12;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Stay Motivated!</h1>
+        <p id="quoteText">"The only way to do great work is to love what you do." - Steve Jobs</p>
+        <button onclick="newQuote()">Get a New Quote</button>
+    </div>
+
+    <script>
+        // Array of motivational quotes
+        const quotes = [
+            "\"Success is not final, failure is not fatal: It is the courage to continue that counts.\" - Winston Churchill",
+            "\"The only way to do great work is to love what you do.\" - Steve Jobs",
+            "\"Don't watch the clock; do what it does. Keep going.\" - Sam Levenson",
+            "\"Believe you can and you're halfway there.\" - Theodore Roosevelt",
+            "\"The future belongs to those who believe in the beauty of their dreams.\" - Eleanor Roosevelt",
+            "\"The only limit to our realization of tomorrow is our doubts of today.\" - Franklin D. Roosevelt",
+            "\"It always seems impossible until it's done.\" - Nelson Mandela"
+        ];
+
+        // Function to get a random quote
+        function newQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quoteText").innerText = quotes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
